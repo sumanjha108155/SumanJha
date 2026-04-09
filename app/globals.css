@@ -1,0 +1,342 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --page-bg: #faf9f6;
+  --page-text: #1a1a2e;
+  --page-muted: #6b6b80;
+  --page-border: #d4d0c8;
+  --page-highlight: #4f46e5;
+  --page-shadow: rgba(0, 0, 0, 0.15);
+}
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #111118;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--page-highlight);
+  color: white;
+}
+
+/* ===== Scene ===== */
+.page-scene {
+  width: 100%;
+  height: 100%;
+  perspective: 2200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Single Page Wrapper ===== */
+.page-stack {
+  position: relative;
+  width: calc(100vw - 40px);
+  height: calc(100vh - 40px);
+  transform-style: preserve-3d;
+}
+
+/* ===== Each Page ===== */
+.page-leaf {
+  position: absolute;
+  inset: 0;
+  transform-origin: center center;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--page-bg);
+  border: 1px solid var(--page-border);
+  box-shadow:
+    0 2px 8px rgba(0,0,0,0.08),
+    0 8px 30px rgba(0,0,0,0.12);
+}
+
+/* Corner ornaments — disabled on base, SVG used on cover only */
+.page-leaf::before,
+.page-leaf::after {
+  display: none;
+}
+
+/* Inner border frame for non-cover pages */
+.simple-corners::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px solid var(--page-border);
+  border-radius: 2px;
+  z-index: 20;
+  pointer-events: none;
+  opacity: 0.35;
+}
+.simple-corners::after {
+  display: none;
+}
+
+/* Gold ornament positioning — cover page only */
+.corner-ornament {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  z-index: 20;
+  pointer-events: none;
+}
+.corner-ornament svg {
+  width: 100%;
+  height: 100%;
+}
+.corner-ornament.tl {
+  top: 4px;
+  left: 4px;
+}
+.corner-ornament.tr {
+  top: 4px;
+  right: 4px;
+  transform: scaleX(-1);
+}
+.corner-ornament.bl {
+  bottom: 4px;
+  left: 4px;
+  transform: scaleY(-1);
+}
+.corner-ornament.br {
+  bottom: 4px;
+  right: 4px;
+  transform: scale(-1, -1);
+}
+
+/* States */
+.page-leaf.current {
+  transform: rotateX(0deg) scale(1);
+  opacity: 1;
+  z-index: 10;
+}
+
+.page-leaf.above {
+  transform: rotateX(90deg) translateY(-60%) scale(0.95);
+  opacity: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.page-leaf.below {
+  transform: rotateX(-90deg) translateY(60%) scale(0.95);
+  opacity: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* ===== Page Content ===== */
+.page-content {
+  height: 100%;
+  padding: 56px 72px;
+  overflow-y: auto;
+  color: var(--page-text);
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content::-webkit-scrollbar { width: 3px; }
+.page-content::-webkit-scrollbar-track { background: transparent; }
+.page-content::-webkit-scrollbar-thumb {
+  background: var(--page-border);
+  border-radius: 2px;
+}
+
+/* ===== Typography ===== */
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--page-text);
+  margin-bottom: 4px;
+  line-height: 1.25;
+}
+
+.section-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--page-highlight);
+  margin-bottom: 10px;
+}
+
+.page-number {
+  font-size: 0.7rem;
+  color: var(--page-muted);
+  letter-spacing: 0.05em;
+  margin-top: auto;
+  padding-top: 20px;
+  text-align: right;
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+/* ===== Tags ===== */
+.tag {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: #eeece6;
+  color: var(--page-muted);
+  border: 1px solid var(--page-border);
+  line-height: 1.4;
+}
+
+/* ===== Divider ===== */
+.divider {
+  height: 1px;
+  background: var(--page-border);
+  margin: 24px 0;
+  flex-shrink: 0;
+}
+
+/* ===== Skill list ===== */
+.skill-group {
+  margin-bottom: 16px;
+}
+
+/* ===== Navigation ===== */
+.book-nav {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 100;
+  background: rgba(17, 17, 24, 0.9);
+  backdrop-filter: blur(12px);
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.nav-btn {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.6);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+.nav-btn:hover:not(:disabled) {
+  background: rgba(255,255,255,0.08);
+  color: white;
+  border-color: rgba(255,255,255,0.25);
+}
+.nav-btn:disabled {
+  opacity: 0.2;
+  cursor: default;
+}
+
+.nav-dots {
+  display: flex;
+  gap: 7px;
+}
+.nav-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+.nav-dot.active {
+  background: var(--page-highlight);
+  box-shadow: 0 0 8px rgba(79, 70, 229, 0.5);
+  transform: scale(1.4);
+}
+
+.nav-label {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.35);
+  min-width: 80px;
+  text-align: center;
+}
+
+/* ===== Cover special ===== */
+.cover-dark {
+  background: linear-gradient(145deg, #16162a 0%, #1a1a3e 60%, #12122a 100%) !important;
+  border-color: rgba(99, 102, 241, 0.25) !important;
+  box-shadow:
+    0 2px 8px rgba(0,0,0,0.2),
+    0 8px 30px rgba(0,0,0,0.3) !important;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .page-stack {
+    width: calc(100vw - 24px);
+    height: calc(100vh - 24px);
+  }
+  .page-content {
+    padding: 28px 24px;
+  }
+  .page-title {
+    font-size: 1.5rem;
+  }
+  .book-nav {
+    bottom: 6px;
+    padding: 8px 14px;
+    gap: 8px;
+  }
+  .nav-label {
+    display: none;
+  }
+  .skill-group {
+    margin-bottom: 0;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--page-border);
+    margin-bottom: 16px;
+  }
+  .skill-group:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-stack {
+    width: calc(100vw - 12px);
+    height: calc(100vh - 12px);
+  }
+  .page-content {
+    padding: 20px 18px;
+  }
+  .page-title {
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "personalInfo": {
+    "name": "Suman Jha",
+    "title": ".NET Full Stack Developer",
+    "email": "suman.jha180155@gmail.com",
+    "phone": "+977-9863777208",
+    "location": "Kathmandu, Nepal",
+    "profileImage": "/images/profile.jpg",
+    "summary": ".NET Full Stack Developer with 3+ years of experience in building and maintaining web applications using C#, .NET Core, ASP.NET MVC, Web API, Entity Framework, LINQ, and SQL Server. Skilled in Angular, JavaScript, TypeScript, HTML, CSS, and Bootstrap with experience in RESTful APIs, microservices, Git, and CI/CD pipelines. Experienced in Agile/Scrum environments, focusing on debugging, performance optimization, and third-party integrations."
+  },
+  "experience": [
+    {
+      "title": "Software Developer",
+      "company": "Simform Solutions",
+      "location": "Ahmedabad, India",
+      "startDate": "Jul 2023",
+      "endDate": "Present",
+      "description": "Worked on an ASP.NET and SQL Server package delivery system, responsible for developing and maintaining backend logic, generating application installers (.exe), and implementing OAuth authentication flows for Google and Office 365. Integrated two enterprise systems in .NET Core using XML for cross-company data exchange. Handled backend settlements for various sports betting types in .NET Core, including design and implementation of settlement logic. Designed and built secure REST APIs for scalable and maintainable backends. Acted as a mentor to junior developers on settlement workflows and backend best practices.",
+      "technologies": ["ASP.NET", ".NET Core", "EF Core", "LINQ", "SQL Server", "AWS", "CI/CD", "Docker"]
+    },
+    {
+      "title": "Full Stack Developer - Intern",
+      "company": "Simform Solutions",
+      "location": "Ahmedabad, India",
+      "startDate": "Jan 2023",
+      "endDate": "Jul 2023",
+      "description": "Developed a robust PDF viewer desktop application with zoom, navigation, word select, and search features. Engineered a custom clipboard management tool (PasteBoard) for coding environments using Next.js. Designed and implemented an e-commerce application (Flipkart Clone) using .NET MVC and SQL Server.",
+      "technologies": [".NET MVC", "SQL Server", "Next.js"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Technology",
+      "field": "Computer Engineering",
+      "institution": "Marwadi University",
+      "location": "Gujarat, India",
+      "year": "2019 - 2025",
+      "gpa": "9.81/10",
+      "courses": ["Operating Systems", "Data Structures", "Algorithms", "AI", "Machine Learning", "Computer Networks", "DBMS", "Cyber Security", "Blockchain"]
+    },
+    {
+      "degree": "Science",
+      "field": "Science",
+      "institution": "Madan Bhandari Memorial College",
+      "location": "Kathmandu, Nepal",
+      "year": "2017 - 2019",
+      "gpa": "3.51/4"
+    }
+  ],
+  "skills": [
+    "C#",
+    ".NET Core",
+    "ASP.NET",
+    ".NET MVC",
+    "Web API",
+    "Entity Framework Core",
+    "LINQ",
+    "SQL Server",
+    "PostgreSQL",
+    "MySQL",
+    "Firebase",
+    "Angular",
+    "JavaScript",
+    "TypeScript",
+    "HTML",
+    "CSS",
+    "Bootstrap",
+    "Next.js",
+    "Python",
+    "Git",
+    "Docker",
+    "AWS",
+    "Azure",
+    "Kafka",
+    "CI/CD",
+    "REST APIs",
+    "Microservices"
+  ],
+  "projects": [
+    {
+      "name": "GPT App",
+      "description": "An application built with Python and Tkinter using the GPT-3 model, featuring English to SQL conversion, text transcription, Q&A, and intent classification.",
+      "technologies": ["Python", "Tkinter", "GPT-3"],
+      "link": ""
+    },
+    {
+      "name": "Library Management System",
+      "description": "A comprehensive Library Management System enabling schools to effectively manage library books and student records.",
+      "technologies": ["jQuery", ".NET", "REST API"],
+      "link": ""
+    },
+    {
+      "name": "PasteBoard",
+      "description": "A custom clipboard management tool for daily use in coding environments with infinite storage space.",
+      "technologies": ["Next.js"],
+      "link": ""
+    },
+    {
+      "name": "PDF Viewer",
+      "description": "A robust PDF viewer desktop application with functionalities such as zoom, navigation, word select, and search meanings.",
+      "technologies": [".NET"],
+      "link": ""
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Developer Associate",
+      "issuer": "Amazon Web Services",
+      "year": ""
+    },
+    {
+      "name": "Microsoft Azure Administrator Associate",
+      "issuer": "Microsoft",
+      "year": ""
+    },
+    {
+      "name": "Microsoft Azure Solutions Architect Expert",
+      "issuer": "Microsoft",
+      "year": ""
+    }
+  ],
+  "languages": ["English", "Nepali", "Hindi"],
+  "aiTools": ["Cursor", "GitHub Copilot", "Claude", "Perplexity", "ChatGPT"],
+  "tools": ["Slack", "Confluence", "Jira", "Git", "VS Code", "Postman", "Grafana", "Coralogix", "Azure", "AWS"]
+}
