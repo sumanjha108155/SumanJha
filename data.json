@@ -1,21 +1,30 @@
 {
   "personalInfo": {
     "name": "Suman Jha",
-    "title": ".NET Full Stack Developer",
+    "title": "Software Engineer II",
     "email": "suman.jha180155@gmail.com",
     "phone": "+977-9863777208",
     "location": "Kathmandu, Nepal",
     "profileImage": "/images/profile.jpg",
-    "summary": ".NET Full Stack Developer with 3+ years of experience in building and maintaining web applications using C#, .NET Core, ASP.NET MVC, Web API, Entity Framework, LINQ, and SQL Server. Skilled in Angular, JavaScript, TypeScript, HTML, CSS, and Bootstrap with experience in RESTful APIs, microservices, Git, and CI/CD pipelines. Experienced in Agile/Scrum environments, focusing on debugging, performance optimization, and third-party integrations."
+    "summary": "Software Engineer with 3+ years of experience building and maintaining web applications and backend systems using C#, .NET Core, ASP.NET MVC, Web API, Entity Framework, LINQ, and SQL Server. Currently at Verisk Nepal, working on AI agent and MCP based solutions, API gateway management with Kong, shared NuGet packages, and AWS hosted services. Also skilled in Angular, JavaScript, TypeScript, HTML, CSS, and Bootstrap, with experience in RESTful APIs, microservices, Git, and CI/CD pipelines. Experienced in Agile and Scrum environments, focusing on debugging, performance optimization, and third party integrations."
   },
   "experience": [
+    {
+      "title": "Software Engineer II",
+      "company": "Verisk Nepal",
+      "location": "Prasiddha Tower, Lalitpur, Nepal",
+      "startDate": "Jul 2026",
+      "endDate": "Present",
+      "description": "Working on AI agent and Model Context Protocol (MCP) based solutions, connecting agents with internal services and tools. Design, build, and maintain APIs, and manage API exposure and routing through Kong. Create and maintain shared NuGet packages so common functionality can be reused across services. Develop and deploy services on AWS, with releases handled through Octopus Deploy.",
+      "technologies": [".NET Core", "C#", "MCP", "AI Agents", "Kong", "NuGet", "AWS", "Octopus Deploy", "REST APIs"]
+    },
     {
       "title": "Software Developer",
       "company": "Simform Solutions",
       "location": "Ahmedabad, India",
       "startDate": "Jul 2023",
-      "endDate": "Present",
-      "description": "Worked on an ASP.NET and SQL Server package delivery system, responsible for developing and maintaining backend logic, generating application installers (.exe), and implementing OAuth authentication flows for Google and Office 365. Integrated two enterprise systems in .NET Core using XML for cross-company data exchange. Handled backend settlements for various sports betting types in .NET Core, including design and implementation of settlement logic. Designed and built secure REST APIs for scalable and maintainable backends. Acted as a mentor to junior developers on settlement workflows and backend best practices.",
+      "endDate": "Jun 2026",
+      "description": "Worked on an ASP.NET and SQL Server package delivery system, responsible for developing and maintaining backend logic, generating application installers (.exe), and implementing OAuth authentication flows for Google and Office 365. Integrated two enterprise systems in .NET Core using XML for cross company data exchange. Handled backend settlements for various sports betting types in .NET Core, including design and implementation of settlement logic. Designed and built secure REST APIs for scalable and maintainable backends. Acted as a mentor to junior developers on settlement workflows and backend best practices.",
       "technologies": ["ASP.NET", ".NET Core", "EF Core", "LINQ", "SQL Server", "AWS", "CI/CD", "Docker"]
     },
     {
@@ -29,6 +38,16 @@
     }
   ],
   "education": [
+    {
+      "degree": "Master of Engineering Management (MEM)",
+      "field": "Engineering Management",
+      "institution": "Yeti College",
+      "location": "Buddhanagar, Baneshwor, Nepal",
+      "year": "Present",
+      "gpa": "",
+      "courses": [],
+      "affiliation": "SPU University, Thailand"
+    },
     {
       "degree": "Bachelor of Technology",
       "field": "Computer Engineering",
@@ -74,7 +93,12 @@
     "Kafka",
     "CI/CD",
     "REST APIs",
-    "Microservices"
+    "Microservices",
+    "MCP",
+    "AI Agents",
+    "Kong",
+    "NuGet",
+    "Octopus Deploy"
   ],
   "projects": [
     {
@@ -121,5 +145,5 @@
   ],
   "languages": ["English", "Nepali", "Hindi"],
   "aiTools": ["Cursor", "GitHub Copilot", "Claude", "Perplexity", "ChatGPT"],
-  "tools": ["Slack", "Confluence", "Jira", "Git", "VS Code", "Postman", "Grafana", "Coralogix", "Azure", "AWS"]
+  "tools": ["Slack", "Confluence", "Jira", "Git", "VS Code", "Postman", "Grafana", "Coralogix", "Azure", "AWS", "Octopus Deploy", "Kong"]
 }
