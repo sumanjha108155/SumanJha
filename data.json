@@ -94,11 +94,16 @@
     "CI/CD",
     "REST APIs",
     "Microservices",
-    "MCP",
+    "Model Context Protocol (MCP)",
     "AI Agents",
-    "Kong",
-    "NuGet",
-    "Octopus Deploy"
+    "API Development",
+    "API Gateway (Kong)",
+    "NuGet Package Development",
+    "Octopus Deploy",
+    "OAuth",
+    "XML Integrations",
+    "Agile",
+    "Scrum"
   ],
   "projects": [
     {
